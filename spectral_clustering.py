@@ -14,6 +14,8 @@ assign_chain = [[[1, 1, 2], [1, 1, 2], [1, 2, 3],],]
 
 
 def compute_connectivity_matrix(assign_chain, n):
+    """Compute an n x n matrix, where entry (i, j) is the number of times data point i and data point j were in the same cluster.
+    """
     connectivity = np.zeros((n, n))
 
     for model_assignments in assign_chain:
